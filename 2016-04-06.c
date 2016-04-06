@@ -16,21 +16,20 @@ U 0101 0101
 int main()
 {
 	char c;
-	int a[1] = {0};
+	int a[6] = {0, 0, 0, 0, 0, 0};
 	int b[7];
-	int i;
-	while (c = getchar())
+	while (c = getchar() & 95)
 	{
 		switch (c)
 		{
 			case EOF:
 				return 0;
 				break;
-			case '\n':
-				printf("A: %d, E: %d, I: %d, O: %d, U: %d\n", 0[a], 1[a], 2[a], 3[a], 4[a]);
+			case '\n': // ':' also make sense.
+				printf("A: %d, E: %d, I: %d, O: %d, U: %d\n", 0[a], 1[a], 2[a], 3[a], 5[a]);
 				break;
 			default:
-				if (((c & 65) == 65) & (c & 2) / 2 == (((c & 4) / 4) & ((c & 8) / 8)))
+				if (((c & 65) == 65) & (c & 2) * 2 == ((c & 4) & ((c & 8) / 2)))
 					a[(c & 28) / 4]++;
 		}
 	}
